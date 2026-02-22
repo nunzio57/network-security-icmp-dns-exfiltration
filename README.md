@@ -78,24 +78,6 @@ Replacement of iptables with nftables to implement advanced defenses:
 - Rate limiting with dynamic meter: exceeding = insertion into global blacklist
 - DNS enforcement via DNAT: all port 53 traffic forcefully redirected to 8.8.8.8
 
-## Repository Structure
-
-```
-.
-├── firewall/
-│   ├── iptables_vulnerable.sh    # Vulnerable firewall configuration
-│   └── nftables_hardened.sh      # Hardened firewall with mitigations
-├── icmp_tunneling/
-│   ├── icmp_sender.py            # Filesystem discovery and reporting
-│   ├── stealer.py                # File exfiltration via ICMP
-│   └── icmp_receiver.py          # Data reception and reconstruction
-├── dns_tunneling/
-│   ├── injector.py               # Automated dropper
-│   ├── dns_stealer.py            # DNS tunneling malware
-│   └── dns_receiver.py           # DNS query interception
-└── README.md
-```
-
 ## Requirements
 
 - VirtualBox (or equivalent) for the VMs
